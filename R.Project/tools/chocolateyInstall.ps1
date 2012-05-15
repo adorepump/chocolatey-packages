@@ -1,0 +1,1 @@
+﻿Install-ChocolateyPackage 'R.Project' 'exe' '/silent' 'http://cran.cnr.berkeley.edu/bin/windows/base/R-2.15.0-win.exe' -validExitCodes @(0)

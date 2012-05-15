@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Processing</id>
+    <title>Processing</title>
+    <version>1.5.1</version>
+    <authors>Ben Fry and Casey Reas</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Processing is an open source programming language and environment for people 
+    who want to create images, animations, and interactions. Initially developed to serve 
+    as a software sketchbook and to teach fundamentals of computer programming within a 
+    visual context, Processing also has evolved into a tool for generating finished professional work.
+    </summary>
+    <description>Processing is an electronic sketchbook for developing 
+    ideas. It is a context for learning fundamentals of computer programming 
+    within the context of the electronic arts </description>
+    <projectUrl>http://processing.org/</projectUrl>
+    <tags>processing java animation programming</tags>
+    <copyright>All contents copyright Ben Fry, Casey Reas, MIT Media Laboratory</copyright>
+    <licenseUrl>http://www.opensource.org/licenses/gpl-license.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.gaffta.org/wp/wp-uploads/2009/07/processing.png</iconUrl>
+    <dependencies>
+      <dependency id="Quicktime"/>
+      <dependency id="WinVDIG"/>
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

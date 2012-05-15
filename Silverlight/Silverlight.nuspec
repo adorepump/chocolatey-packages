@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Silverlight</id>
+    <title>Microsoft Silverlight</title>
+    <version>5.0</version>
+    <authors>Microsoft</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Silverlight is a powerful development tool for creating engaging, interactive user experiences for Web and mobile applications</summary>
+    <description>Silverlight is a powerful development tool for creating engaging, interactive user experiences for Web and mobile applications</description>
+    <projectUrl>https://www.microsoft.com/silverlight/</projectUrl>
+    <tags>Silverlight microsoft</tags>
+    <copyright>Copyright © 2012 Microsoft</copyright>
+    <licenseUrl>http://www.microsoft.com/getsilverlight/get-started/install/license.aspx?v=5.0.61118.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://www.microsoft.com/silverlight/fw/logoSilverlight.jpg</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

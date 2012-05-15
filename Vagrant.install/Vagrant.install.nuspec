@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Vagrant.install</id>
+    <title>Vagrant(Install)</title>
+    <version>1.0.3.1</version>
+    <authors>Mitchell Hashimoto and John Bender</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Vagrant is a tool for building and distributing virtualized development environments</summary>
+    <description>Vagrant is a tool for building and distributing virtualized development environments</description>
+    <projectUrl>http://vagrantup.com</projectUrl>
+    <tags>vagrant admin devops</tags>
+    <copyright>Copyright © 2009-2012. Mitchell Hashimoto and John Bender</copyright>
+    <licenseUrl>http://creativecommons.org/licenses/by/3.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://chrisblazek.me/wp-content/uploads/2012/02/vagrant_chilling.png</iconUrl>
+    <dependencies>
+      <dependency id="virtualbox"/>
+      <dependency id="putty"/>      
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

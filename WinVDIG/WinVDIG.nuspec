@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>WinVDIG</id>
+    <title>WinVDIG</title>
+    <version>1.0.5</version>
+    <authors>Tim Molteno</authors>
+    <owners>Elliando Dias</owners>
+    <summary>WinVDIG is one of the only free VDIG for Windows implementation. It is able to handle 
+    a large variety of hardware by implementing a simple DirectShow to QuickTime bridge</summary>
+    <description>WinVDIG: video digitizer component for QuickTime for Windows</description>
+    <projectUrl>http://www.eden.net.nz/7/20071008/</projectUrl>
+    <tags>winvdig quicktime</tags>
+    <copyright>Tim Molteno</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://github.com/ferventcoder/nugetpackages/raw/master/WinVDIG/WinVDIG.gif</iconUrl>-->
+    <dependencies>
+      <dependency id="Quicktime"/>
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

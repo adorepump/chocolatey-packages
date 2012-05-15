@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Gow</id>
+    <title>Gow</title>
+    <version>0.5.0</version>
+    <authors>Brent R. Matzelle</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Gow (Gnu On Windows) is the lightweight alternative to Cygwin. It uses a 
+convenient Windows installer that installs about 130 extremely useful 
+open source UNIX applications compiled as native win32 binaries. It is 
+designed to be as small as possible, about 10 MB, as opposed to Cygwin 
+which can run well over 100 MB depending upon options</summary>
+    <description>Unix command line utilities installer for Windows</description>
+    <projectUrl>https://github.com/bmatzelle/gow/wiki/</projectUrl>
+    <tags>gow admin linux</tags>
+    <copyright>Copyright (c) 2006 - 2012 Brent R. Matzelle</copyright>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://github.com/ferventcoder/nugetpackages/raw/master/Gow/Gow.gif</iconUrl>-->
+     <releaseNotes></releaseNotes>
+  </metadata>
+</package>

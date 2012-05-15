@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SkyDrive</id>
+    <title>SkyDrive</title>
+    <version>16.4</version>
+    <authors>Microsoft</authors>
+    <owners>Elliando Dias</owners>
+    <summary>SkyDrive is a file hosting service that allows users to upload and sync files 
+	to a cloud storage and then access them from a Web browser or their local device</summary>
+    <description>SkyDrive is a file hosting service that allows users to upload and sync files 
+	to a cloud storage and then access them from a Web browser or their local device</description>
+    <projectUrl>http://windows.microsoft.com/en-HK/skydrive/home</projectUrl>
+    <tags>skydrive microsoft</tags>
+    <copyright>© Microsoft Corporation. All rights reserved</copyright>
+    <licenseUrl>http://windows.microsoft.com/en-US/windows-live/microsoft-service-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.wp7connect.com/wp-content/uploads/2011/12/skydrive.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
+

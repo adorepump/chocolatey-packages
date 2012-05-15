@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Desktops</id>
+    <title>Desktops</title>
+    <version>1.02</version>
+    <authors>Mark Russinovich and Bryce Cogswell</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Desktops allows you to organize your applications on up to four virtual desktops</summary>
+    <description>Desktops allows you to organize your applications on up to four virtual desktops</description>
+    <projectUrl>http://technet.microsoft.com/en-us/sysinternals/cc817881.aspx</projectUrl>
+    <tags>desktops sysinternals virtual-desktops</tags>
+    <copyright>Copyright 2006-2008 Mark Russinovich and Bryce Cogswell</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://github.com/ferventcoder/nugetpackages/raw/master/Desktops/Desktops.gif</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
