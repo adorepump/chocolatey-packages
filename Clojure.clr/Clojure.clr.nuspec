@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>clojure.clr</id>
+    <title>Clojure.clr</title>
+    <version>1.3.0</version>
+    <authors>Rich Hickey</authors>
+    <owners>Elliando Dias</owners>
+    <summary>ClojureCLR is a native implementation of Clojure on Microsoft’s .Net Framework, programmed in C# and using Microsoft's Dynamic Language Runtime (DLR)</summary>
+    <description>A port of Clojure to the CLR, part of the Clojure project </description>
+    <projectUrl>https://github.com/clojure/clojure-clr/wiki</projectUrl>
+    <tags>clojure .net programming</tags>
+    <copyright>Copyright (c) Rich Hickey. All rights reserved</copyright>
+    <licenseUrl>http://eclipse.org/legal/epl-v10.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://clojure.org/file/view/clojure-icon.gif</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
