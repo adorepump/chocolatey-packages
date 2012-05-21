@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mobipocket.reader</id>
+    <title>Mobipocket Reader Desktop</title>
+    <version>6.2</version>
+    <authors>Mobipocket Team</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Easy way to build, organize, read and annotate your entire eBook library. Best .mobi files reader</summary>
+    <description>Easy way to build, organize, read and annotate your entire eBook library</description>
+    <projectUrl>http://www.mobipocket.com/en/downloadsoft/productdetailsreader.asp</projectUrl>
+    <tags>mobipocket mobi ebook library</tags>
+    <copyright></copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.laptopmag.com/uploadedImages/review/round-up/2009/images/mobipocket_t.jpg</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
