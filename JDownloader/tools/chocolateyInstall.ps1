@@ -1,0 +1,1 @@
+﻿Install-ChocolateyPackage 'JDownloader' 'exe' '-q' 'http://installer.jdownloader.org/JDownloaderSetup.exe'

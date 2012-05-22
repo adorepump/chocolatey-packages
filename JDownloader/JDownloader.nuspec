@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jdownloader</id>
+    <title>JDownloader</title>
+    <version>0.9.581</version>
+    <authors>Rob Reynolds</authors>
+    <owners>Elliando Dias</owners>
+    <summary>JDownloader is a free, open-source download management tool with a huge community 
+	of developers that makes downloading as easy and fast as it should be</summary>
+    <description>JDownloader is a tool  that makes downloading as easy and fast</description>
+    <projectUrl>http://jdownloader.org</projectUrl>
+    <tags>download-manager jdownloader</tags>
+    <copyright>JD Team</copyright>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://jdownloader.org/_media/knowledge/wiki/jdownloader.png?w=150</iconUrl>
+    <!--<dependencies>
+      <dependency id="java" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
