@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ireport</id>
+    <title>iReport</title>
+    <version>4.5.1</version>
+    <authors>The iReport Team</authors>
+    <owners>Elliando Dias</owners>
+    <summary>iReport is the free, open source report designer for JasperReports</summary>
+    <description>iReport is the free, open source report designer for JasperReports</description>
+    <projectUrl>http://jasperforge.org/projects/ireport</projectUrl>
+    <tags>ireport report java</tags>
+    <copyright>Copyright@2000 - 2012 JasperForge</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/adorepump/chocolatey-packages/raw/master/iReport/ireport.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
