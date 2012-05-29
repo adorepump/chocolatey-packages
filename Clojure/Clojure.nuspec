@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>clojure</id>
+    <title>Clojure</title>
+    <version>1.2.0</version>
+    <authors>Rich Hickey</authors>
+    <owners>Elliando Dias</owners>
+    <summary>It is designed to be a general-purpose language, combining the approachability and 
+	interactive development of a scripting language with an efficient and robust infrastructure 
+	for multithreaded programming. Clojure is a compiled language - it compiles directly to 
+	JVM bytecode, yet remains completely dynamic. Every feature supported by Clojure is supported at runtime. 
+	Clojure provides easy access to the Java frameworks, with optional type hints and type inference, 
+	to ensure that calls to Java can avoid reflection</summary>
+    <description>Clojure is a dynamic programming language that targets the Java Virtual Machine</description>
+    <projectUrl>http://clojure.org/</projectUrl>
+    <tags>clojure java development</tags>
+    <copyright>Copyright 2008-2012 Rich Hickey</copyright>
+    <licenseUrl>http://clojure.org/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://clojure.org/file/view/clojure-icon.gif</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
