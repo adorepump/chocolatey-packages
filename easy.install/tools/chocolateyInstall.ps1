@@ -14,20 +14,19 @@ function Get-RegistryValue($key, $value) {
 }  
 
 function Get-Python-Home() {
-  $result = $env:PYTHONHOME
+  #envs: PYTHONHOME and PYTHON_HOME
+  $result = $null
   
-  if ($result -eq $null) {
-    $result = $env:PYTHON_HOME
+  $filename = Get-RegistryValue "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Python.exe" '(default)' 
+  
+  if ($filename -eq $null) {
+    $filename = Get-RegistryValue "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Python.exe" '(default)'  
   }
   
-  if ($result -eq $null) {
-    $filename = Get-RegistryValue "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Python.exe" '(default)' 
-  
-    if ($filename -ne $null) {
-      $file = Get-ChildItem $filename
-      $result = $file.DirectoryName	  
-    }
-  }  
+  if ($filename -ne $null) {
+    $file = Get-ChildItem $filename
+    $result = $file.DirectoryName	  
+  }
   
   return $result
 }
@@ -46,28 +45,15 @@ function is64bit() {
   return ([IntPtr]::Size -eq 8)
 }
 
-function Read-Confirmation($message) {
-  $caption = "Confirm";
-  $yes = new-Object System.Management.Automation.Host.ChoiceDescription "&Yes","help";
-  $no = new-Object System.Management.Automation.Host.ChoiceDescription "&No","help";
-  $choices = [System.Management.Automation.Host.ChoiceDescription[]]($yes,$no);
-  $answer = $host.ui.PromptForChoice($caption,$message,$choices,0)
-
-  switch ($answer){
-    0 { return $true; break}
-    1 { return $false; break}
-  }
-}
-
 function Python-Exec($url, $name) {
-  # _cmd "cd /d %TEMP% && curl -O $url && python $name"
+  # _cmd "cd /d %TEMP% && curl -O $url && python $name" #old way
   
   $filename = Join-Path $env:TEMP $name
   Get-ChocolateyWebFile 'easy.install' $filename $url
   
   if (has_file $filename) {
     Write-Host "Running python file: '$filename'"
-    python $filename #todo: check if python not is in path
+    python $filename
   }  
 }
 
@@ -109,28 +95,35 @@ function Verify-installation() {
   return has_file (Join-Path $global:python_home 'Scripts\easy_install.exe')
 }
 
+function setup-python() {
+  $python_home = Get-Python-Home
+
+  if ($python_home -eq $null) {    
+    Write-Host "Installing Python using chocolatey. Wait..."
+    cinst python    
+  
+    $python_home = Get-Python-Home
+  
+    if ($python_home -eq $null) {
+      throw 'Python is not installed. easy_install installation aborted!'
+    }
+  }    
+  
+  $python_script = Join-Path $python_home 'Scripts'
+  Install-ChocolateyPath $python_home 'User'
+  Install-ChocolateyPath $python_script 'User'
+  
+  Write-Host "Setting PYTHONHOME environment variable to '$python_home'"
+  Write-Host "PS: PYTHONHOME variable is not required to Python works, but it is a good practice to have it."
+  [Environment]::SetEnvironmentVariable('PYTHONHOME', $python_home, 'User')  
+  
+  return $python_home
+}
+
 function chocolatey-initialize() {
-  $global:python_home = Get-Python-Home
-
-  if ($global:python_home -eq $null) {
-    if (Read-Confirmation 'Python not installed, Would you like to install Python now?' ) {
-      Write-Host "Installing Python using chocolatey. Wait..."
-      cinst python
-	  $global:python_home = Get-Python-Home
-    }	 
-  } 
-
-  if ($global:python_home -eq $null) {
-    throw 'Python is not installed. easy_install installation aborted!'
-  }
+  $global:python_home = setup-python
   
   Write-Host "Using python home at '$global:python_home'"
-
-  if (($env:PYTHONHOME -eq $null) -and ($global:python_home -ne $null)) {
-    Write-Host "Setting PYTHONHOME environment variable to '$global:python_home'"
-    Write-Host "PS: PYTHONHOME variable is not required to Python works, but it is a good practice to have it."
-    [Environment]::SetEnvironmentVariable('PYTHONHOME', $global:python_home, 'User')  
-  }
 
   $global:python_version = Get-Python-Version
 
@@ -145,8 +138,6 @@ function chocolatey-install() {
 	    Write-Host "Installing easy_install for Python($global:python_version)..."
 	
 		Install-easy-install
-        $python_script_dir = Join-Path $global:python_home 'Scripts'
-        Install-ChocolateyPath $python_script_dir 'User'
         
         $status = Verify-installation
         
@@ -161,3 +152,5 @@ function chocolatey-install() {
 }
 
 chocolatey-install # installs easy_install
+
+
