@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>flyway.commandline</id>
+    <title>Flyway, the agile database migration framework for Java</title>
+    <version>1.6.1</version>
+    <authors>flyway Team</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Flyway  is database-independent library for tracking, managing and applying database changes</summary>
+    <description>Flyway  is database-independent library for tracking, managing and applying database changes</description>
+    <projectUrl>http://code.google.com/p/flyway/wiki/CommandLine</projectUrl>
+    <tags>flyway database migration</tags>
+    <copyright>Copyright (C) 2010-2012</copyright>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/adorepump/chocolatey-packages/raw/master/flyway.commandline/flyway.png</iconUrl>
+    <dependencies>
+      <dependency id="binRoot"/>
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
