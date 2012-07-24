@@ -18,7 +18,7 @@ CreateFolder($binRoot)
 
 $version = '1.8.3'
 $name = "apache-ant-$version" 
-$url = "http://linorg.usp.br/apache/ant/binaries/$name-bin.zip"
+$url = "http://archive.apache.org/dist/ant/binaries/$name-bin.zip"
 $ant_home = Join-Path $binRoot $name
 $ant_bin = Join-Path  $ant_home 'bin'
 
