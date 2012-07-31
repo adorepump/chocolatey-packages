@@ -65,7 +65,8 @@ function Install-setuptools($version) {
     Python-Exec 'http://peak.telecommunity.com/dist/ez_setup.py' 'ez_setup.py'
   }
   else {  
-	$url = "http://pypi.python.org/packages/$version/s/setuptools/setuptools-$version.win32-py$pyvrs.exe"
+    # http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe
+	$url = "http://pypi.python.org/packages/$pyvrs/s/setuptools/setuptools-$version.win32-py$pyvrs.exe"
 	Install-ChocolateyPackage 'easy.install/setuptools' 'exe' '/S' $url	
   }
 }
