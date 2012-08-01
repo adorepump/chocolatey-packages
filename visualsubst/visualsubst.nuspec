@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualsubst</id>
+    <title>Visual Subst</title>
+    <version>1.0.6</version>
+    <authors>ntwing.com team</authors>
+    <owners>Elliando Dias</owners>
+    <summary>Visual Subst is a small tool that allows you to associate the most accessed directories with virtual drives</summary>
+    <description>Visual Subst is a small tool that allows you to associate the most accessed directories with virtual drives</description>
+    <projectUrl>http://www.ntwind.com/software/utilities/visual-subst.html</projectUrl>
+    <tags>productivity</tags>
+    <copyright>Copyright © 2012, NTWind Software. All rights reserved</copyright>
+    <licenseUrl>http://www.ntwind.com/privacy.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/adorepump/chocolatey-packages/raw/master/visualsubst/visualsubst.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
