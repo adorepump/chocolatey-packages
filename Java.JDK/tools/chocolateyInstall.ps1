@@ -5,11 +5,11 @@
 # 'http://download.oracle.com/otn-pub/java/jdk/7u4-b22/jdk-7u4-windows-i586.exe'
 # 'http://download.oracle.com/otn-pub/java/jdk/7u4-b22/jdk-7u4-windows-x64.exe'
 
-$jdk_version = '7u4' 
-$java_version = '1.7.0' # cmd> java -version => "1.7.0_04"
+$jdk_version = '7u7' 
+$java_version = '1.7.0_07' # cmd> java -version => "1.7.0_04"
 $package_name = 'Java.JDK'
 
-function _cmd($command) {
+function wcmd($command) {
   Write-Host "executing cmd> $command"
   $result = cmd.exe /c "$command 2>&1" #stderr hack
   
@@ -18,19 +18,6 @@ function _cmd($command) {
 
 function is64bit() {
   return ([IntPtr]::Size -eq 8)
-}
-
-function has_file($filename) {
-  return Test-Path $filename
-}
-
-function get-programfilesdir() {
-  if (is64bit -eq $true) {
-    (Get-Item "Env:ProgramFiles(x86)").Value
-  }
-  else {
-    (Get-Item "Env:ProgramFiles").Value
-  }
 }
 
 function set-env-var([string]$name, [string]$value, [string]$type = 'User') {
@@ -44,10 +31,10 @@ function set-env-var([string]$name, [string]$value, [string]$type = 'User') {
 }
 
 function download-from-oracle($url, $output_filename, $part) {
-  if (-not (has_file($output_fileName))) {
+  if (-not (test-path $output_fileName)) {
     $cookies="oraclelicense$part-oth-JPR=accept-securebackup-cookie;gpw_e24=http://edelivery.oracle.com"
     $cmd = "wget --no-check-certificate --header=""Cookie: $cookies"" -x -c ""$url"" -O ""$output_filename"""  # -nc
-    w_cmd $cmd
+    wcmd $cmd
   }  
 }
 
@@ -63,25 +50,23 @@ function download-jdk() {
       $osStr = 'i586'
     }
 
-    $filename = "jdk-7u4-windows-$osStr.exe"
-    $url = "http://download.oracle.com/otn-pub/java/jdk/7u4-b22/$filename"
+    $filename = "jdk-7u7-windows-$osStr.exe"
+    $url = "http://download.oracle.com/otn-pub/java/jdk/7u7-b10/$filename"
     $package_dir = Join-Path $env:TEMP "chocolatey\$package_name"
-    $output_filename = Join-Path $package_dir $filename
-    download-jdk-file $url $output_filename
-    return $output_filename
+    if(-not(test-path $package_dir)){mkdir $package_dir}
+    $script:InstallPath = Join-Path $package_dir $filename
+    download-jdk-file $url $script:InstallPath
 }
 
 function chocolatey-install() {
     try {
         Write-Host  "Downloading JDK using WGET, wait..."
-        $jdk_file = download-jdk
-        
-        if (has_file $jdk_file) { 
-          Write-Host "Installing JDK from file '$jdk_file'"
-          Install-ChocolateyInstallPackage 'Java.jdk' 'exe' '/QN /NORESTART' $jdk_file          
+        download-jdk
+        if (test-path $script:InstallPath) { 
+          Write-Host "Installing JDK from file '$script:InstallPath'"
+          Install-ChocolateyInstallPackage 'Java.jdk' 'exe' '/QN /NORESTART' $script:InstallPath          
 
-          $program_files = get-programfilesdir
-          $java_home = Join-Path $program_files "Java\jdk$java_version"   #jdk1.6.0_17
+          $java_home = Join-Path $Env:ProgramFiles "Java\jdk$java_version"   #jdk1.7.0_07
           $java_bin = Join-Path $java_home 'bin'
           Install-ChocolateyPath $java_bin 'Machine'                 
                  
@@ -94,7 +79,7 @@ function chocolatey-install() {
           Write-ChocolateySuccess 'Java.JDK'
         } 
         else {
-          Write-ChocolateyFailure 'Java.JDK' "File '$jdk_file' not found"
+          Write-ChocolateyFailure 'Java.JDK' "File '$script:InstallPath' not found"
         }
          
     } catch {
