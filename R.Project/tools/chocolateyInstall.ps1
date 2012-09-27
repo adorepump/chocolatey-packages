@@ -1,1 +1,2 @@
-﻿Install-ChocolateyPackage 'R.Project' 'exe' '/silent' 'http://cran.cnr.berkeley.edu/bin/windows/base/R-2.15.0-win.exe' -validExitCodes @(0)
+﻿$url='http://cran.at.r-project.org/bin/windows/base/R-2.15.1-win.exe'
+Install-ChocolateyPackage 'R.Project' 'exe' '/silent' "$url" -validExitCodes @(0)
