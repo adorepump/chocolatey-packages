@@ -1,6 +1,6 @@
 ﻿#cmd> mvn -version
 
-#create folder if not exists    
+#create folder if not exists
 function CreateFolder ([string]$Path) {
   New-Item -Path $Path -type directory -Force
 }
@@ -21,8 +21,9 @@ $m2_bin = Join-Path $m2_home 'bin'
 $m2_repo = Join-Path $env:USERPROFILE '.m2'
 
 #$url = "http://apache.mirror.pop-sc.rnp.br/apache/maven/binaries/$name-bin.zip"
-$url = "http://ftp.unicamp.br/pub/apache/maven/binaries/$name-bin.zip"
-  
+#$url = "http://ftp.unicamp.br/pub/apache/maven/binaries/$name-bin.zip"
+$url = "http://www.bizdirusa.com/mirrors/apache/maven/maven-3/$version/binaries/$name-bin.zip"
+
 [Environment]::SetEnvironmentVariable('M2_HOME', $m2_home, "User")
 [Environment]::SetEnvironmentVariable('MAVEN_OPTS', '-Xms256m', "User")
 [Environment]::SetEnvironmentVariable('M2', $m2_bin, "User")
