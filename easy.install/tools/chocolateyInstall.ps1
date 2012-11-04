@@ -117,6 +117,7 @@ function setup-python() {
   Write-Host "Setting PYTHONHOME environment variable to '$python_home'"
   Write-Host "PS: PYTHONHOME variable is not required to Python works, but it is a good practice to have it."
   [Environment]::SetEnvironmentVariable('PYTHONHOME', $python_home, 'User')  
+  $Env:PYTHONHOME = $python_home
   
   return $python_home
 }
