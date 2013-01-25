@@ -3,7 +3,7 @@
   <metadata>
     <id>Gow</id>
     <title>Gow</title>
-    <version>0.5.0</version>
+    <version>0.7.0</version>
     <authors>Brent R. Matzelle</authors>
     <owners>Elliando Dias</owners>
     <summary>Gow (Gnu On Windows) is the lightweight alternative to Cygwin. It uses a 
