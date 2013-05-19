@@ -3,7 +3,7 @@
   <metadata>
     <id>maven</id>
     <title>Maven</title>
-    <version>3.0.4</version>
+    <version>3.0.5</version>
     <authors>The Apache Maven team</authors>
     <owners>Elliando Dias</owners>
     <summary>Apache Maven is a software project management and comprehension tool. Based on the concept of a project object 
@@ -11,7 +11,7 @@
     <description>Apache Maven is a software project management and comprehension tool</description>
     <projectUrl>http://maven.apache.org/</projectUrl>
     <tags>maven java development</tags>
-    <copyright>© 2002-2012 The Apache Software Foundation</copyright>
+    <copyright>© 2002-2013 The Apache Software Foundation</copyright>
     <licenseUrl>http://maven.apache.org/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://upload.wikimedia.org/wikipedia/commons/f/f5/Maven_logo.gif</iconUrl>
