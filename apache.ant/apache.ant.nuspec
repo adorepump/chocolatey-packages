@@ -1,23 +1,26 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>apache.ant</id>
-    <title>Apache Ant</title>
-    <version>1.9.2</version>
-    <authors>Apache Software Foundation</authors>
-    <owners>Elliando Dias</owners>
-    <summary>Apache Ant is a software tool for automating software build processes</summary>
-    <description>Apache Ant is a software tool for automating software build processes</description>
-    <projectUrl>http://ant.apache.org/</projectUrl>
-    <tags>apache java ant build-tool</tags>
-    <copyright>� 2002-2012 The Apache Software Foundation</copyright>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.zoomingin.net/wp-content/uploads/2010/12/Apache-Ant-Logo-java.png</iconUrl>
-    <dependencies>
-      <!-- <dependency id="java" version="" />  -->	  
-	  <dependency id="binRoot"/> 
-    </dependencies>
-    <releaseNotes></releaseNotes>
-  </metadata>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>apache.ant</id>
+        <version>1.9.2</version>
+        <title>Apache Ant</title>
+        <authors>Apache Software Foundation</authors>
+        <owners>Elliando Dias</owners>
+        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+        <projectUrl>http://ant.apache.org/</projectUrl>
+        <iconUrl>http://www.zoomingin.net/wp-content/uploads/2010/12/Apache-Ant-Logo-java.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Apache Ant is a software tool for automating software build processes</description>
+        <summary>Apache Ant is a software tool for automating software build processes</summary>
+        <releaseNotes>Originally released on 12 July 2013</releaseNotes>
+        <copyright>© 2002-2013 The Apache Software Foundation</copyright>
+        <tags>apache java ant build-tool</tags>
+        <dependencies>
+            <dependency id="binRoot" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="ant_logo.png" target="ant_logo.png" />
+    </files>
 </package>
