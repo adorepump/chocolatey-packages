@@ -16,7 +16,7 @@ if($env:chocolatey_bin_root -ne $null){
 
 CreateFolder($binRoot)
 
-$version = '1.8.4'
+$version = '1.9.2'
 $name = "apache-ant-$version" 
 $url = "http://archive.apache.org/dist/ant/binaries/$name-bin.zip"
 $ant_home = Join-Path $binRoot $name
