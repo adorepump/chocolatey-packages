@@ -5,7 +5,7 @@ if($env:chocolatey_bin_root -ne $null){
   $binRoot = join-path $env:systemdrive $env:chocolatey_bin_root
 }
 
-$version = '3.0.5'
+$version = '3.1.1'
 $name = "apache-maven-$version"
 $m2_home = Join-Path $binRoot $name
 $m2_bin = Join-Path $m2_home 'bin'
