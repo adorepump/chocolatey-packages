@@ -3,7 +3,7 @@
   <metadata>
     <id>pip</id>
     <title>Pip(Python) Installs Packages</title>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <authors>The pip developers</authors>
     <owners>Elliando Dias</owners>
     <summary>pip is a tool for installing and managing Python packages, such as those found in the Python Package Index</summary>
@@ -18,7 +18,7 @@
       <dependency id="easy.install" version="" />
     </dependencies>
     <releaseNotes>
-	By default, it will install the packages virtualenv, fabric, ipython and django
+	No longer installs virtualenv, fabric, ipython or django.
 	</releaseNotes>
   </metadata>
 </package>
