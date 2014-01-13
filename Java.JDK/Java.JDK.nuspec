@@ -3,10 +3,13 @@
   <metadata>
     <id>java.jdk</id>
     <title>Java.JDK</title>
-    <version>7.4</version>
+    <version>7.45</version>
     <authors>Sun Microsystems/Oracle Corporation</authors>
-    <owners>Elliando Dias</owners>
-    <summary>The Java Development Kit (JDK) is an Oracle Corporation product aimed at Java developers</summary>
+    <owners>Elliando Dias, Carolyn Van Slyck</owners>
+    <summary>The Java Development Kit (JDK) is an Oracle Corporation product aimed at Java developers.
+Supported parameters, use -params e.g. '"path=c:\\java\\jdk;x64=false"' to override defaults
+* Use x64=false to force the 32-bit version. By default this package installs the x64 version when installing on 64 bit OS.
+* Use path=installation_path to change the installation path. By default, installs into Program Files. If you specify a path with spaces, use 2 single quotes around the path, e.g. path=''c:\\Java JDK''.</summary>
     <description>Java Development Kit (JDK)</description>
     <projectUrl>http://www.oracle.com/technetwork/java/javase/downloads/index.html</projectUrl>
     <tags>java jdk</tags>
