@@ -3,7 +3,7 @@
   <metadata>
     <id>java.jdk</id>
     <title>Java.JDK</title>
-    <version>7.4</version>
+    <version>7.7</version>
     <authors>Sun Microsystems/Oracle Corporation</authors>
     <owners>Elliando Dias</owners>
     <summary>The Java Development Kit (JDK) is an Oracle Corporation product aimed at Java developers</summary>
