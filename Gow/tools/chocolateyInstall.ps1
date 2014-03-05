@@ -1,2 +1,2 @@
-﻿$version='0.7.0'
-Install-ChocolateyPackage 'Gow' 'exe' '/S' "https://github.com/downloads/bmatzelle/gow/Gow-$version.exe"  -validExitCodes @(0)
+﻿$version='0.8.0'
+Install-ChocolateyPackage 'Gow' 'exe' '/S' "https://github.com/bmatzelle/gow/releases/download/v$version/Gow-$version.exe"  -validExitCodes @(0)
