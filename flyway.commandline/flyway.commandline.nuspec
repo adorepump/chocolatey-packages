@@ -14,9 +14,6 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/adorepump/chocolatey-packages/raw/master/flyway.commandline/flyway.png</iconUrl>
-    <dependencies>
-      <dependency id="binRoot"/>
-    </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
 </package>

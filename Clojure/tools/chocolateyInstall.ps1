@@ -1,17 +1,6 @@
-﻿# import-module C:\Chocolatey\chocolateyInstall\helpers\chocolateyInstaller
+# import-module C:\Chocolatey\chocolateyInstall\helpers\chocolateyInstaller
 
-function get-binRoot() {
-  if($env:chocolatey_bin_root -ne $null) {
-    $binRoot = $env:chocolatey_bin_root
-  }
-  else {
-    $binRoot = 'bin'
-  }
-  
-  return Join-Path $env:systemdrive $binRoot
-}
-
-$binRoot = get-binRoot
+$binRoot = Get-BinRoot
 $clojure_version = '1.2.0'
 $clojure_contrib_version = '1.2.0'
 $jline_version = '1.0'
