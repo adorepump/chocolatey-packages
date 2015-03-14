@@ -1,9 +1,4 @@
-﻿$binRoot = join-path $env:systemdrive 'bin'
-
-### Using an environment variable to to define the bin root until we implement YAML configuration ###
-if($env:chocolatey_bin_root -ne $null){
-  $binRoot = join-path $env:systemdrive $env:chocolatey_bin_root
-}
+$binRoot = Get-BinRoot
 
 $version = '3.0.5'
 $name = "apache-maven-$version"

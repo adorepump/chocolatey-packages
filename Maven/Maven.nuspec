@@ -15,9 +15,6 @@
     <licenseUrl>http://maven.apache.org/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://upload.wikimedia.org/wikipedia/commons/f/f5/Maven_logo.gif</iconUrl>
-    <dependencies>
-      <dependency id="binroot"/>
-    </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
 </package>

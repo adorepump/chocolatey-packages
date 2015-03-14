@@ -1,4 +1,4 @@
-﻿# ant - v
+# ant - v
 
 # Unable to locate tools.jar. Expected to find it in c:\program files (x86)\java\jre6\lib\tools.jar
 # JAVA_HOME > C:\Program Files (x86)\Java\jdk1.6.0_17
@@ -7,12 +7,7 @@ function CreateFolder ([string]$Path) {
   New-Item -Path $Path -type directory -Force
 }
 
-$binRoot = join-path $env:systemdrive 'bin'
-
-### Using an environment variable to to define the bin root until we implement YAML configuration ###
-if($env:chocolatey_bin_root -ne $null){
-  $binRoot = join-path $env:systemdrive $env:chocolatey_bin_root
-}
+$binRoot = Get-BinRoot
 
 CreateFolder($binRoot)
 

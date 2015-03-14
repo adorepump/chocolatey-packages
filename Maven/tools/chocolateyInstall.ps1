@@ -1,16 +1,11 @@
-﻿#cmd> mvn -version
+#cmd> mvn -version
 
 #create folder if not exists
 function CreateFolder ([string]$Path) {
   New-Item -Path $Path -type directory -Force
 }
 
-$binRoot = join-path $env:systemdrive 'bin'
-
-### Using an environment variable to define the bin root until we implement YAML configuration ###
-if($env:chocolatey_bin_root -ne $null){
-  $binRoot = join-path $env:systemdrive $env:chocolatey_bin_root
-}
+$binRoot = Get-BinRoot
 
 CreateFolder($binRoot)
 

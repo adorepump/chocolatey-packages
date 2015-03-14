@@ -14,10 +14,6 @@
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.zoomingin.net/wp-content/uploads/2010/12/Apache-Ant-Logo-java.png</iconUrl>
-    <dependencies>
-      <!-- <dependency id="java" version="" />  -->	  
-	  <dependency id="binRoot"/> 
-    </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
 </package>
